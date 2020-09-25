@@ -18,7 +18,9 @@ class LatersProductsManager:
             ct_model=ContentType.objects.filter(model=with_respect_to)
             if ct_model.exists():
                 if with_respect_to in args:
-                    return sorted(products, key=lambda x: x.__class__.meta.model_name.startwith(with_respect_to),reverse=True)
+                    return sorted(
+                        products, key=lambda x: x.__class__.meta.model_name.startwith(with_respect_to),reverse=True
+                        )
         return products
 
 class LatersProducts:
