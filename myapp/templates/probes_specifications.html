@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade active in" id="home">
+        <h4>Product Information</h4>
+          <table class="table table-bordered">
+          <tbody>
+          <tr class="techSpecRow"><th colspan="2">Product Details</th></tr>
+          <tr class="techSpecRow"><td class="techSpecTD1">Brand: </td><td class="techSpecTD2">{{product.title}} мл</td></tr>
+          <tr class="techSpecRow"><td class="techSpecTD1">Name: </td><td class="techSpecTD2">{{product.slug}} мл</td></tr>
+          <tr class="techSpecRow"><td class="techSpecTD1">volume: </td><td class="techSpecTD2">{{product.volume}} мл</td></tr>
+          <tr class="techSpecRow"><td class="techSpecTD1">notes:</td><td class="techSpecTD2">{{product.notes}}</td></tr>
+          <tr class="techSpecRow"><td class="techSpecTD1">fragrance_type:</td><td class="techSpecTD2"> {{product.fragrance_type}}</td></tr>
+          <tr class="techSpecRow"><td class="gender">gender:</td><td class="techSpecTD2">{%if product.gender is True%} Женские {%else%} Мужской {%endif%}</td></tr>
+          </tbody>
+          </table>
+          
+          <p>
+              {{product.description}}
+          </p>
+        </div>
+</body>
+</html>
+
+
